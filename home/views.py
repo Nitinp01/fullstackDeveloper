@@ -21,5 +21,6 @@ def services (request):
      return render(request, 'services.html')
     #return HttpResponse("This is ServicesPage")
 def contact (request):
+     
      return render(request, 'contact.html')
     #return HttpResponse("This is ContactPage")

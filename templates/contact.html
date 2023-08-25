@@ -5,11 +5,33 @@
 {% block title %}Contact{% endblock title %}
 
 {% block body %}
-<div class="container-fluid px-0 ">
-    <img src="/static/10.avif" height="600" width="1550" alt="...">
-<h3 style="position: absolute;
-top:259px;
-left:766px; " >Contact Us</h3>
+<div class="container-fluid px-0 mb-3 ">
+    <img src="/static/10.avif" height="300" width="1550" alt="...">
+</div>
+<div class="container mb-3 py-4 ">
+<h1 class="text-center"  >Contact Us</h1>
+<form method ="post" action="/contact">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="Email" placeholder="Enter your Email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone No</label>
+      <input type="Phone" class="form-control" id="phone" name="phone" placeholder="Enter your Mobile Number">
+    </div>
+   
+    <div class="form-group">
+      <label for="desc">Tell what do you want to contact me for......... ??</label>
+      <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+    </div>
+    <button class="btm btn-primary" type="submit">Submit</button>
+  </form>
+
 
 </div>
 {% endblock body %}
